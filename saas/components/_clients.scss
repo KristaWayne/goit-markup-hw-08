@@ -1,0 +1,33 @@
+.clients {
+  @extend %margin-top;
+  &__title {
+    @extend %title;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 170px;
+    height: 92px;
+    fill: $color-icons;
+    border: 1px solid $color-icons;
+    border-radius: 4px;
+
+    transition: border $animation-time $cubic, fill $animation-time $cubic;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+      fill: $accent-color;
+    }
+  }
+}

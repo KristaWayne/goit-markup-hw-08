@@ -1,0 +1,128 @@
+.footer {
+  background-color: $background-color;
+  @extend %margin-top;
+  padding: 60px 0;
+
+  &__container {
+    display: flex;
+    gap: 70px;
+  }
+  &__logo {
+    @extend %logo;
+    display: inline-block;
+    margin-bottom: 20px;
+    &-text--accent {
+      color: $accent-color;
+    }
+    &-text--light {
+      color: $color-white;
+    }
+  }
+  &__address {
+    color: $color-white;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  &__info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  &__link {
+    color: $info-footer-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    transition: color $animation-time $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  &__social-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color $animation-time $cubic;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+  &__social-icon {
+    fill: $color-white;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__input {
+    padding: 15px 16px;
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $color-white;
+  }
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    border-radius: 4px;
+    border: none;
+    background-color: $accent-color;
+    color: $color-white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    line-height: 1.87;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color $animation-time $cubic;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color-hover;
+    }
+  }
+  &__button-text::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url('../images/airplane.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+  }
+}

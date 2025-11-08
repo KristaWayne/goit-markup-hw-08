@@ -1,0 +1,37 @@
+{
+  "editor.fontSize": 18,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.formatOnPaste": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "​": true
+  },
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "window.zoomLevel": 1,
+  "liveSassCompile.settings.showOutputWindowOn": "None",
+  "liveSassCompile.settings.includeItems": [
+
+  ],
+  "liveSassCompile.settings.useNewCompiler": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "./css/"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "./css/"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**"
+  ]
+}

@@ -1,0 +1,100 @@
+.portfolio {
+  padding: 94px 0;
+  &__buttons-list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  &__button {
+    background-color: $portfolio-button-color;
+    color: var(--headers-color);
+    border: 1px solid $portfolio-button-color;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+    padding: 6px 22px;
+    cursor: pointer;
+
+    transition: background-color $animation-time $cubic,
+      color $animation-time $cubic, box-shadow $animation-time $cubic,
+      border $animation-time $cubic;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $color-white;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+      border: 1px solid $accent-color;
+    }
+  }
+  &__cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  &__element {
+    transition: box-shadow $animation-time $cubic;
+
+    &:hover,
+    &:focus {
+      box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+        0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+  &__name {
+    color: $headers-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 200%;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  &__definition {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: 0.03em;
+  }
+  &__lowpart {
+    max-width: 370px;
+  padding: 20px 24px;
+  border: 1px solid $border-cards-color;
+  border-top: none;
+  }
+  &__img {
+  display: block;
+}
+&__under-cover {
+  position: relative;
+  overflow: hidden;
+}
+&__cover {
+  position: absolute;
+  opacity: 1;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  color: $color-white;
+  padding: 63px 29px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  width: 370px;
+  height: 294px;
+
+  transition: transform $animation-time $cubic,
+    opacity $animation-time $cubic;
+}
+&__element:hover &__cover {
+  transform: translateY(-100%);
+  opacity: 1;
+}
+}
