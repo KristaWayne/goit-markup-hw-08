@@ -20,16 +20,15 @@
     <!--Шапка-->
     <header class="header">
       <div class="container header__container">
+        <a class="header__logo" href="./"
+          ><span class="header__logo-text header__logo-text--accent">Web</span
+          ><span class="header__logo-text header__logo-text--black"
+            >Studio</span
+          ></a>
+        <svg class="header__burger" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
         <nav class="header__nav">
-          <a class="header__logo" href="./"
-            ><span class="header__logo-text header__logo-text--accent">Web</span
-            ><span class="header__logo-text header__logo-text--black"
-              >Studio</span
-            ></a
-          >
-          <svg class="header__burger" width="40" height="40">
-            <use href="./images/icons.svg#icon-menu"></use>
-          </svg>
           <ul class="header__pages">
             <li class="header__link header__link--select">
               <a href="./index.html">Студія</a>
@@ -152,11 +151,10 @@
         </form>
       </div>
     </div>
-
     <!--Особливості-->
-    <section>
+    <section class="advantages">
       <div class="container">
-        <ul class="advantages">
+        <ul class="advantages__list">
           <li class="advantages__item">
             <div class="advantages__card">
               <svg width="70" height="70">
@@ -253,7 +251,7 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__cards">
           <li class="team__item">
-            <img
+            <img class="team__img"
               src="./images/img-1.jpg"
               alt="фото Ігора Дем'яненко"
               width="270"
@@ -289,7 +287,7 @@
             </ul>
           </li>
           <li class="team__item">
-            <img
+            <img class="team__img"
               src="./images/img-2.jpg"
               alt="фото Ольги Рєпіної"
               width="270"
@@ -325,7 +323,7 @@
             </ul>
           </li>
           <li class="team__item">
-            <img
+            <img class="team__img"
               src="./images/img-3.jpg"
               alt="фото Миколи Тарасова"
               width="270"
@@ -361,7 +359,7 @@
             </ul>
           </li>
           <li class="team__item">
-            <img
+            <img class="team__img"
               src="./images/img-4.jpg"
               alt="фото Михайла Єрмакова"
               width="270"

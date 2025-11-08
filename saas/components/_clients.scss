@@ -4,19 +4,17 @@
     @extend %title;
   }
   &__list {
+    gap: 30px;
     display: flex;
-    justify-content: space-between;
-  }
-  &__list {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   &__link {
+    padding: 16px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    width: 170px;
     height: 92px;
     fill: $color-icons;
     border: 1px solid $color-icons;
@@ -28,6 +26,9 @@
     &:focus {
       border: 1px solid $accent-color;
       fill: $accent-color;
+    }
+    @media (min-width: 768px) {
+      width: 170px;
     }
   }
 }

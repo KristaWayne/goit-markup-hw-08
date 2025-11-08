@@ -1,24 +1,22 @@
 .header {
+ 
   border-bottom: 1px solid $border-bottom-color;
   &__container {
     display: flex;
     align-items: center;
-    }
+    justify-content: space-between;
+  }
   &__nav {
     display: flex;
     align-items: center;
- @media (max-width: 767px) {
-  width: 100%;
- }
   }
-  
+
   &__burger {
-    margin-left: auto;
     @media (min-width: 768px) {
       display: none;
     }
   }
-  
+
   &__pages a {
     color: var(--headers-color);
     font-weight: 500;
