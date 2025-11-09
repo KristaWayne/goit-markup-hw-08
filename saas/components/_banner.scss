@@ -16,21 +16,25 @@
   &__title {
     color: $color-white;
     font-weight: 900;
-      font-size: 26px;
-line-height: 162%;
-    
+    font-size: 26px;
+    line-height: 162%;
+
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
 
     @media (min-width: 768px) {
       font-size: 44px;
-    line-height: 136%;
+      line-height: 136%;
     }
   }
   &__button {
     margin-top: 45px;
-    padding: 10px 32px;
+    padding: 10px 24px;
+    @media (min-width: 768px) {
+      padding: 10px 32px;
+    }
+
     color: $color-white;
     background-color: $accent-color;
     border: 1px solid $accent-color;

@@ -93,6 +93,9 @@ p {
   display: flex;
   align-items: center;
 }
+.header__burger {
+  margin-left: auto;
+}
 @media (min-width: 768px) {
   .header__burger {
     display: none;
@@ -205,7 +208,7 @@ p {
 }
 .banner__button {
   margin-top: 45px;
-  padding: 10px 32px;
+  padding: 10px 24px;
   color: #fff;
   background-color: #2196f3;
   border: 1px solid #2196f3;
@@ -217,6 +220,11 @@ p {
   letter-spacing: 0.06em;
   text-align: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (min-width: 768px) {
+  .banner__button {
+    padding: 10px 32px;
+  }
 }
 .banner__button:hover, .banner__button:focus {
   background-color: #188ce8;
@@ -538,8 +546,10 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.clients__item {
-  width: calc(50% - 15px);
+@media (max-width: 767px) {
+  .clients__item {
+    width: calc(50% - 15px);
+  }
 }
 .clients__link {
   display: flex;
