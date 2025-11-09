@@ -538,9 +538,12 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.clients__item {
+  width: calc(50% - 15px);
+}
 .clients__link {
-  padding: 16px 50px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   cursor: pointer;
