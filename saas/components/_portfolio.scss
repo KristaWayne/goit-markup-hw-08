@@ -1,9 +1,14 @@
 .portfolio {
-  padding: 94px 0;
+  padding-top: 60px;
   &__buttons-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
+    margin-bottom: 40px;
+    @media (min-width: 768px) {
+      justify-content: center;
+      margin-bottom: 0;
+    }
   }
   &__button {
     background-color: $portfolio-button-color;
@@ -17,8 +22,10 @@
     letter-spacing: 0.03em;
 
     text-align: center;
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
 
-    margin-bottom: 50px;
     padding: 6px 22px;
     cursor: pointer;
 
@@ -34,11 +41,20 @@
         0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
       border: 1px solid $accent-color;
     }
+    &--select {
+      background-color: $accent-color;
+      color: $color-white;
+    }
   }
   &__cards {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+    }
   }
   &__element {
     transition: box-shadow $animation-time $cubic;
@@ -65,36 +81,37 @@
   }
   &__lowpart {
     max-width: 370px;
-  padding: 20px 24px;
-  border: 1px solid $border-cards-color;
-  border-top: none;
+    padding: 20px 24px;
+    border: 1px solid $border-cards-color;
+    border-top: none;
   }
   &__img {
-  display: block;
-}
-&__under-cover {
-  position: relative;
-  overflow: hidden;
-}
-&__cover {
-  position: absolute;
-  opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &__under-cover {
+    position: relative;
+    overflow: hidden;
+  }
+  &__cover {
+    position: absolute;
+    opacity: 1;
 
-  background-color: rgba(33, 150, 243, 0.9);
-  color: $color-white;
-  padding: 63px 29px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 156%;
-  letter-spacing: 0.03em;
-  width: 370px;
-  height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $color-white;
+    padding: 63px 29px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    width: 370px;
+    height: 294px;
 
-  transition: transform $animation-time $cubic,
-    opacity $animation-time $cubic;
-}
-&__element:hover &__cover {
-  transform: translateY(-100%);
-  opacity: 1;
-}
+    transition: transform $animation-time $cubic, opacity $animation-time $cubic;
+  }
+  &__element:hover &__cover {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
 }

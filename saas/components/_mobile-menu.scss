@@ -1,0 +1,100 @@
+.menu {
+  transform: translateX(100%);
+
+  transition: transform $animation-time ease-in-out;
+  &.is-open {
+    transform: translateX(0);
+  }
+  @media (min-width: 768px) {
+      display: none;
+    }
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-left: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+
+  &__button {
+    background-color: transparent;
+    border: none;
+  }
+  &__open {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+  &__close:hover {
+    color: $accent-color;
+  }
+  &__list {
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+  }
+  &__page:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__page a {
+    color: $headers-color;
+  }
+  &__page--select a {
+    color: $accent-color;
+  }
+  &__commun {
+    position: absolute;
+    bottom: 134px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    font-weight: 500;
+    font-size: 34px;
+    letter-spacing: 0.02em;
+  }
+  &__tel {
+    color: $accent-color;
+  }
+  &__mail {
+    color: $light-grey-color;
+    font-size: 24px;
+  }
+  &__social {
+    bottom: 48px;
+    left: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__social a {
+    color: $accent-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    letter-spacing: 0.02em;
+  }
+  &__link:not(:last-child)::after {
+    content: '';
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    width: 22px;
+    height: 0px;
+
+    margin-left: 10px;
+  }
+}

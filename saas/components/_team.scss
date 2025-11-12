@@ -6,16 +6,23 @@
   }
   &__cards {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+       flex-direction: row;
+    }
+    @media (min-width: 1200px) {
      flex-direction: row;
-
+     flex-wrap: nowrap;
     }
   }
   &__item {
     width: 100%;
+     @media (min-width: 768px) {
+      width: calc(50% - 15px);
+    }
     padding-bottom: 30px;
     background-color: $color-white;
     border-bottom-left-radius: 4px;
